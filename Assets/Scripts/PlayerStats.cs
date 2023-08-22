@@ -1,15 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
     public static PlayerStats playerStats;
 
     public GameObject player;
+    
+    public TMP_Text healthText;
+    public Slider healthSlider;
+    
+    public TMP_Text manaText;
+    public Slider manaSlider;
 
     public float health;
     public float maxHealth;
+
+    public float mana;
+    public float maxMana;
 
     void Awake()
     {
@@ -27,6 +38,8 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         health = maxHealth;
+        mana = maxMana;
+        SetHealthUI();
     }
 
 
@@ -34,6 +47,7 @@ public class PlayerStats : MonoBehaviour
     {
         health -= damage;
         CheckDeath();
+        SetHealthUI();
     }
 
 
@@ -41,6 +55,19 @@ public class PlayerStats : MonoBehaviour
     {
         heal += heal;
         CheckOverheal();
+        SetHealthUI();
+    }
+
+    private void SetHealthUI()
+    {
+        healthText.text = Mathf.Ceil(health).ToString() + "/" + Mathf.Ceil(maxHealth).ToString();
+        healthSlider.value = CalculateHealthPrecent();
+    }
+
+    private void SetManaUI()
+    {
+        manaText.text = Mathf.Ceil(mana).ToString() + "/" + Mathf.Ceil(maxMana).ToString();
+        manaSlider.value = CalculateManaPrecent();
     }
 
 
@@ -57,7 +84,18 @@ public class PlayerStats : MonoBehaviour
     {
         if (health <= 0)
         {
+            health = 0;
             Destroy(player);
         }
+    }
+
+    private float CalculateManaPrecent()
+    {
+        return (mana / maxMana);
+    }
+
+    private float CalculateHealthPrecent()
+    {
+        return (health / maxHealth);
     }
 }

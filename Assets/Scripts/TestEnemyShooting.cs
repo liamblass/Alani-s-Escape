@@ -24,7 +24,7 @@ public class TestEnemyShooting : MonoBehaviour
         {
             GameObject spell = Instantiate(projectile, transform.position, Quaternion.identity);
             Vector2 myPos = transform.position;
-            Vector2 targetPos = player.position;
+            Vector2 targetPos = player.transform.position;
             Vector2 direction = (targetPos - myPos).normalized;
             spell.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
             spell.GetComponent<TestEnemyProjectile>().damage = Random.Range(minDamage, maxDamage);
