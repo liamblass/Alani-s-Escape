@@ -12,8 +12,7 @@ public class TestEnemyProjectile : MonoBehaviour
         {
             if(collision.tag == "Player")
             {
-                PlayerStats.playerStats.DealDamage(damage);
-                Debug.Log(damage);
+                PlayerStats.playerStats.DealDamage(damage);               
             }
             Destroy(gameObject);
         }

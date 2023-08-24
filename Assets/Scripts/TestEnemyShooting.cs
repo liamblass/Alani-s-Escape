@@ -10,15 +10,10 @@ public class TestEnemyShooting : MonoBehaviour
     public float maxDamage;
     public float projectileForce;
     public float cooldown;
+    
 
-    private void Start()
-    {
-        StartCoroutine(ShootPlayer()); 
-    }
-
-    IEnumerator ShootPlayer()
-    {
-        
+    public IEnumerator ShootPlayer()
+    { 
         yield return new WaitForSeconds(cooldown);
         if (player != null)
         {
@@ -28,7 +23,7 @@ public class TestEnemyShooting : MonoBehaviour
             Vector2 direction = (targetPos - myPos).normalized;
             spell.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
             spell.GetComponent<TestEnemyProjectile>().damage = Random.Range(minDamage, maxDamage);
-            StartCoroutine(ShootPlayer());
+            //StartCoroutine(ShootPlayer());
         }
     }
 }

@@ -393,6 +393,7 @@ GameObject:
   - component: {fileID: 6779056596786949748}
   - component: {fileID: 947454083743792080}
   - component: {fileID: 4386454148714910619}
+  - component: {fileID: -9077642808451077352}
   m_Layer: 0
   m_Name: TestEnemy
   m_TagString: Enemy
@@ -528,3 +529,19 @@ MonoBehaviour:
   maxDamage: 20
   projectileForce: 5
   cooldown: 3
+--- !u!114 &-9077642808451077352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6779056596786949751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7dab772e482b44cab79618c8c7589c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  movementSpeed: 0
+  attackRange: 0
+  lookRadios: 0

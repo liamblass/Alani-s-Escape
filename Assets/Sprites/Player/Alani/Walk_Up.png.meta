@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d6214b65aa6e00e41b2b47138421dfe7
+guid: 7398c9ff8d816664484a7cc7872e2b68
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 36
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,7 +102,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: run2_0
+      name: Walk_Up_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 9
-        width: 28
-        height: 29
+        x: 13
+        y: 10
+        width: 19
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebceb9ab7789a764c95deee8ba181b22
-      internalID: 913886886
+      spriteID: 6619c69dbee5a4e48a7790533a9f9938
+      internalID: -2117691082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: run2_1
+      name: Walk_Up_1
       rect:
         serializedVersion: 2
-        x: 97
-        y: 6
-        width: 30
-        height: 29
+        x: 82
+        y: 8
+        width: 19
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f7b5dc161d6eff4c8800f92849b83f4
-      internalID: 966562327
+      spriteID: cda63c7123db0f14ab8220c21a42e34f
+      internalID: -229690963
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: run2_2
+      name: Walk_Up_2
       rect:
         serializedVersion: 2
-        x: 169
-        y: 6
-        width: 27
-        height: 28
+        x: 151
+        y: 10
+        width: 19
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cf572ed8769f2a40aedee9bf40cf9c4
-      internalID: 1288334807
+      spriteID: ef19f773566e2954189537827d03cba4
+      internalID: -1052386375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: run2_3
+      name: Walk_Up_3
       rect:
         serializedVersion: 2
-        x: 234
-        y: 1
-        width: 30
-        height: 34
+        x: 220
+        y: 8
+        width: 24
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,50 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0023915feec98404d852504175b0087b
-      internalID: 192452872
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run2_4
-      rect:
-        serializedVersion: 2
-        x: 307
-        y: 9
-        width: 25
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0621e1573c58cd645a26bbe1fbfd06de
-      internalID: -1974085947
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run2_5
-      rect:
-        serializedVersion: 2
-        x: 377
-        y: 6
-        width: 25
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f4886cd8119b92e409f3fba476bd20b7
-      internalID: -443682091
+      spriteID: 687ce5cf91f0d2c418a30858b2929b1a
+      internalID: -1137702967
       vertices: []
       indices: 
       edges: []
@@ -253,12 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      run2_1: 966562327
-      run2_4: -1974085947
-      run2_2: 1288334807
-      run2_3: 192452872
-      run2_0: 913886886
-      run2_5: -443682091
+      Walk_Up_1: -229690963
+      Walk_Up_2: -1052386375
+      Walk_Up_3: -1137702967
+      Walk_Up_0: -2117691082
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
