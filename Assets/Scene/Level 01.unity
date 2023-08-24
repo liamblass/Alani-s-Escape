@@ -786,11 +786,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2120387024605696035, guid: 7e40b349f5ac01349931a8b3a83e46d8, type: 3}
   m_PrefabInstance: {fileID: 1725970576}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &893481147 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2120387024605696038, guid: 7e40b349f5ac01349931a8b3a83e46d8, type: 3}
-  m_PrefabInstance: {fileID: 1725970576}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1063669428
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,34 +1595,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -9077642808451077352, guid: 29cd8c9e3b748e94cbba5d2c98e77ce0, type: 3}
-      propertyPath: lookRadios
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: -9077642808451077352, guid: 29cd8c9e3b748e94cbba5d2c98e77ce0, type: 3}
-      propertyPath: attackRange
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: -9077642808451077352, guid: 29cd8c9e3b748e94cbba5d2c98e77ce0, type: 3}
-      propertyPath: movementSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4386454148714910619, guid: 29cd8c9e3b748e94cbba5d2c98e77ce0, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 893481147}
-    - target: {fileID: 4386454148714910619, guid: 29cd8c9e3b748e94cbba5d2c98e77ce0, type: 3}
-      propertyPath: cooldown
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4386454148714910619, guid: 29cd8c9e3b748e94cbba5d2c98e77ce0, type: 3}
-      propertyPath: maxDamage
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4386454148714910619, guid: 29cd8c9e3b748e94cbba5d2c98e77ce0, type: 3}
-      propertyPath: minDamage
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6779056596786949746, guid: 29cd8c9e3b748e94cbba5d2c98e77ce0, type: 3}
       propertyPath: m_RootOrder
       value: 4
