@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2120387024605696033}
   - component: {fileID: 2120387024605696034}
   - component: {fileID: 6378530224219458900}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Alani
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -148,6 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   dashRange: 3
+  lastScenePosition: {x: 0, y: 0}
 --- !u!114 &6378530224219458900
 MonoBehaviour:
   m_ObjectHideFlags: 0
