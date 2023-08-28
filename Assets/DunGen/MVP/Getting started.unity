@@ -123,6 +123,54 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &160804562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8074dc491ddc34f4e83332d9eae76980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Position: {x: 0, y: 0}
+  Name: Corridor
+  IndividualRoomTemplates: []
+  RoomTemplateSets: []
+--- !u!114 &656973336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8074dc491ddc34f4e83332d9eae76980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Position: {x: 0, y: 0}
+  Name: Corridor
+  IndividualRoomTemplates: []
+  RoomTemplateSets: []
+--- !u!114 &797795996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8074dc491ddc34f4e83332d9eae76980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Position: {x: 0, y: 0}
+  Name: Corridor
+  IndividualRoomTemplates: []
+  RoomTemplateSets: []
 --- !u!1 &1096807642
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,3 +366,236 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1752366492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8074dc491ddc34f4e83332d9eae76980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Position: {x: 0, y: 0}
+  Name: Corridor
+  IndividualRoomTemplates: []
+  RoomTemplateSets: []
+--- !u!1001 &8699378652699301697
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 418235459320998436, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstance.room
+      value: 
+      objectReference: {fileID: 656973336}
+    - target: {fileID: 486524485770891080, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstances.Array.data[5].room
+      value: 
+      objectReference: {fileID: 797795996}
+    - target: {fileID: 486524485770891080, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstances.Array.data[6].room
+      value: 
+      objectReference: {fileID: 1752366492}
+    - target: {fileID: 486524485770891080, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstances.Array.data[7].room
+      value: 
+      objectReference: {fileID: 656973336}
+    - target: {fileID: 486524485770891080, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstances.Array.data[8].room
+      value: 
+      objectReference: {fileID: 160804562}
+    - target: {fileID: 486524485770891080, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstances.Array.data[0].doors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 797795996}
+    - target: {fileID: 486524485770891080, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstances.Array.data[1].doors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 1752366492}
+    - target: {fileID: 486524485770891080, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstances.Array.data[1].doors.Array.data[1].connectedRoom
+      value: 
+      objectReference: {fileID: 797795996}
+    - target: {fileID: 486524485770891080, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstances.Array.data[2].doors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 1752366492}
+    - target: {fileID: 486524485770891080, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstances.Array.data[2].doors.Array.data[1].connectedRoom
+      value: 
+      objectReference: {fileID: 656973336}
+    - target: {fileID: 486524485770891080, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstances.Array.data[3].doors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 656973336}
+    - target: {fileID: 486524485770891080, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstances.Array.data[3].doors.Array.data[1].connectedRoom
+      value: 
+      objectReference: {fileID: 160804562}
+    - target: {fileID: 486524485770891080, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstances.Array.data[4].doors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 160804562}
+    - target: {fileID: 486524485770891080, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstances.Array.data[0].doorLines.Array.data[0].usedDoors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 797795996}
+    - target: {fileID: 486524485770891080, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstances.Array.data[1].doorLines.Array.data[0].usedDoors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 1752366492}
+    - target: {fileID: 486524485770891080, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstances.Array.data[1].doorLines.Array.data[1].usedDoors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 797795996}
+    - target: {fileID: 486524485770891080, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstances.Array.data[2].doorLines.Array.data[0].usedDoors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 1752366492}
+    - target: {fileID: 486524485770891080, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstances.Array.data[2].doorLines.Array.data[1].usedDoors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 656973336}
+    - target: {fileID: 486524485770891080, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstances.Array.data[3].doorLines.Array.data[1].usedDoors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 656973336}
+    - target: {fileID: 486524485770891080, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstances.Array.data[3].doorLines.Array.data[3].usedDoors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 160804562}
+    - target: {fileID: 486524485770891080, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstances.Array.data[4].doorLines.Array.data[0].usedDoors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 160804562}
+    - target: {fileID: 746241822342610014, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstance.room
+      value: 
+      objectReference: {fileID: 1752366492}
+    - target: {fileID: 1931680017153709926, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstance.doors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 1752366492}
+    - target: {fileID: 1931680017153709926, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstance.doors.Array.data[1].connectedRoom
+      value: 
+      objectReference: {fileID: 797795996}
+    - target: {fileID: 1931680017153709926, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstance.doorLines.Array.data[0].usedDoors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 1752366492}
+    - target: {fileID: 1931680017153709926, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstance.doorLines.Array.data[1].usedDoors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 797795996}
+    - target: {fileID: 2556818782188042284, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstance.doors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 797795996}
+    - target: {fileID: 2556818782188042284, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstance.doorLines.Array.data[0].usedDoors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 797795996}
+    - target: {fileID: 2753269560795420208, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstance.room
+      value: 
+      objectReference: {fileID: 797795996}
+    - target: {fileID: 2819270345162146690, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstance.room
+      value: 
+      objectReference: {fileID: 160804562}
+    - target: {fileID: 3079444357527919781, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstance.doors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 160804562}
+    - target: {fileID: 3079444357527919781, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstance.doorLines.Array.data[0].usedDoors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 160804562}
+    - target: {fileID: 3411315205251935227, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411315205251935227, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411315205251935227, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411315205251935227, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411315205251935227, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411315205251935227, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411315205251935227, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411315205251935227, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411315205251935227, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411315205251935227, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411315205251935227, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508417418144801154, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstance.doors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 1752366492}
+    - target: {fileID: 7508417418144801154, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstance.doors.Array.data[1].connectedRoom
+      value: 
+      objectReference: {fileID: 656973336}
+    - target: {fileID: 7508417418144801154, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstance.doorLines.Array.data[0].usedDoors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 1752366492}
+    - target: {fileID: 7508417418144801154, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstance.doorLines.Array.data[1].usedDoors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 656973336}
+    - target: {fileID: 8313811076722719192, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: m_Name
+      value: Generated Level
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362103172882557162, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstance.doors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 656973336}
+    - target: {fileID: 8362103172882557162, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstance.doors.Array.data[1].connectedRoom
+      value: 
+      objectReference: {fileID: 160804562}
+    - target: {fileID: 8362103172882557162, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstance.doorLines.Array.data[1].usedDoors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 656973336}
+    - target: {fileID: 8362103172882557162, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
+      propertyPath: RoomInstance.doorLines.Array.data[3].usedDoors.Array.data[0].connectedRoom
+      value: 
+      objectReference: {fileID: 160804562}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3e91128199117b14ca0e4163ad4b8895, type: 3}
