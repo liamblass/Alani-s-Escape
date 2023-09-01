@@ -20,24 +20,32 @@ public class EnemyAttack : MonoBehaviour
 
     private Transform player;
     private bool isAttacking;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
+    private bool isMoving;
 
     private void Start()
     {
         player = PlayerStats.playerStats.player.transform;
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         StartCoroutine(ShootPlayer());
     }
 
     public IEnumerator ShootPlayer()
     {
         yield return new WaitForSeconds(projectileCooldown);
-        if (player != null && isAttacking)
+        if (player != null)
         {
-            GameObject spell = Instantiate(projectile, transform.position, Quaternion.identity);
-            Vector2 myPos = transform.position;
-            Vector2 targetPos = player.transform.position;
-            Vector2 direction = (targetPos - myPos).normalized;
-            spell.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
-            spell.GetComponent<TestEnemyProjectile>().damage = Random.Range(minDamage, maxDamage);
+            if (isAttacking)
+            {
+                GameObject spell = Instantiate(projectile, transform.position, Quaternion.identity);
+                Vector2 myPos = transform.position;
+                Vector2 targetPos = player.transform.position;
+                Vector2 direction = (targetPos - myPos).normalized;
+                spell.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
+                spell.GetComponent<TestEnemyProjectile>().damage = Random.Range(minDamage, maxDamage);
+            }
             StartCoroutine(ShootPlayer());
         }
     }
@@ -65,16 +73,36 @@ public class EnemyAttack : MonoBehaviour
         {
             FollowPlayer();
         }
+        else
+        {
+            isMoving = false;
+        }
+
+        SetAnimatorMovement();
     }
 
    
     private void FollowPlayer()
     {
+        isMoving = true;
+        
         // Calculate the direction towards the player
         Vector2 direction = (player.position - transform.position).normalized;
 
         // Move the enemy towards the player
         transform.Translate(direction * movementSpeed * Time.deltaTime);
+
+        if (direction.x != 0)
+        {
+            if (direction.x < 0)
+            {
+                spriteRenderer.flipX = true;
+            }
+            if(direction.x > 0)
+            {
+                spriteRenderer.flipX = false;
+            }
+        }
     }
 
  private void OnDrawGizmosSelected()
@@ -86,5 +114,15 @@ public class EnemyAttack : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 
-
+    private void SetAnimatorMovement()
+    {
+        if (isMoving)
+        {
+            animator.SetBool("isMoving", true);
+        }
+        if (!isMoving)
+        {
+            animator.SetBool("isMoving", false);
+        }
+    }
 }

@@ -22,6 +22,8 @@ public class LevelManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
+    
+
     private void Start()
     {
         currentScene = GetActiveScene();
@@ -48,5 +50,11 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(scene);
     }
 
-    
+    private void ResetScene()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SceneManager.LoadScene(currentScene);
+        }
+    }
 }

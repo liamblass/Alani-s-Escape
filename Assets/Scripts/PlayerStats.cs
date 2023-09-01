@@ -53,7 +53,7 @@ public class PlayerStats : MonoBehaviour
 
     public void HealCharacter(float heal)
     {
-        heal += heal;
+        health += heal;
         CheckOverheal();
         SetHealthUI();
     }
