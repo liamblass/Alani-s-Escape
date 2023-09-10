@@ -10,9 +10,9 @@ public class TestPorjectiles : MonoBehaviour
     {
       if(collision.name != "Alani")
         {
-            if(collision.GetComponent<EnemyRecieveDamage>() != null)
+            if(collision.GetComponent<EnemyDamage>() != null)
             {
-                collision.GetComponent<EnemyRecieveDamage>().DealDamage(damage);
+                collision.GetComponent<EnemyDamage>().DealDamage(damage);
             }
             Destroy(gameObject);
         }        

@@ -24,12 +24,28 @@ public class EnemyAttack : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private bool isMoving;
 
+    [Header("Attack Type")]
+    public bool rangeAttack;
+    public bool meleeAttack;
+    public float attackRate;
+
+    [SerializeField] private Transform attackPoint;
+    public LayerMask playerLayer;
+    
+
     private void Start()
     {
         player = PlayerStats.playerStats.player.transform;
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        StartCoroutine(ShootPlayer());
+        if (rangeAttack)
+        {
+            StartCoroutine(ShootPlayer());
+        }
+        if (meleeAttack)
+        {
+            StartCoroutine(MeleeAttackPlayer());
+        }
     }
 
     public IEnumerator ShootPlayer()
@@ -44,9 +60,37 @@ public class EnemyAttack : MonoBehaviour
                 Vector2 targetPos = player.transform.position;
                 Vector2 direction = (targetPos - myPos).normalized;
                 spell.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
-                spell.GetComponent<TestEnemyProjectile>().damage = Random.Range(minDamage, maxDamage);
+                spell.GetComponent<TestEnemyProjectile>().damage = GetRandomDamage();
             }
             StartCoroutine(ShootPlayer());
+        }
+    }
+
+    public IEnumerator MeleeAttackPlayer()
+    {
+        yield return new WaitForSeconds(attackRate);
+        if (player != null)
+        {
+            if (isAttacking)
+            {
+                Vector2 myPos = transform.position;
+                Vector2 targetPos = player.transform.position;
+                animator.SetTrigger("Attack");
+                Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer);
+                foreach (Collider2D playerr in hitPlayer)
+                {
+                    PlayerStats.playerStats.DealDamage(GetRandomDamage());
+                }
+                if(targetPos.x > myPos.x)
+                {
+                    attackPoint.localPosition = new Vector3(-1, attackPoint.position.y, 0f);
+                }
+                if (targetPos.x <= myPos.x)
+                {
+                    attackPoint.localPosition = new Vector3(1, attackPoint.position.y, 0f);
+                }
+            }
+            StartCoroutine(MeleeAttackPlayer());
         }
     }
 
@@ -124,5 +168,10 @@ public class EnemyAttack : MonoBehaviour
         {
             animator.SetBool("isMoving", false);
         }
+    }
+    public float GetRandomDamage()
+    {
+        float damage = (Random.Range(minDamage, maxDamage));
+        return damage;
     }
 }

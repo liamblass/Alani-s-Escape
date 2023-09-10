@@ -5,8 +5,6 @@ using UnityEngine;
 public class TestSpell : MonoBehaviour
 {
     public GameObject projectile;
-    public float minDamage;
-    public float maxDamage;
     public float projectileForce;
 
     private void Update()
@@ -18,8 +16,11 @@ public class TestSpell : MonoBehaviour
             Vector2 myPos = transform.position;
             Vector2 direction = (mousePos - myPos).normalized;
             spell.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
-            spell.GetComponent<TestPorjectiles>().damage = (Random.Range(minDamage, maxDamage));
+            float damage = PlayerStats.playerStats.GetRandomDamage();
+            spell.GetComponent<TestPorjectiles>().damage = damage;
         }
     }
+
+    
 
 }

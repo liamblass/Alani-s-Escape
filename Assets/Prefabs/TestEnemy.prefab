@@ -399,7 +399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6779056596786949746
 Transform:
   m_ObjectHideFlags: 0
@@ -510,6 +510,7 @@ MonoBehaviour:
   maxHealth: 100
   healthBar: {fileID: 850313175}
   healthBarSlider: {fileID: 850313176}
+  lootDrop: {fileID: 0}
 --- !u!114 &1349097396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,3 +531,10 @@ MonoBehaviour:
   projectileForce: 10
   projectileCooldown: 2
   projectile: {fileID: 7628087999602000853, guid: 541accec5ce696e44a85079ed0b6158f, type: 3}
+  rangeAttack: 0
+  meleeAttack: 0
+  attackRate: 0
+  attackPoint: {fileID: 0}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0

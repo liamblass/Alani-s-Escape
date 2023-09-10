@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &454638311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 454638312}
+  m_Layer: 6
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &454638312
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454638311}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3487304106556472410}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3487304106556472415
 GameObject:
   m_ObjectHideFlags: 0
@@ -15,7 +46,7 @@ GameObject:
   - component: {fileID: 6561317889087012471}
   - component: {fileID: 7158296705132440056}
   - component: {fileID: 7958257006314751388}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -35,6 +66,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7958257006042556299}
+  - {fileID: 454638312}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -173,6 +205,7 @@ MonoBehaviour:
   maxHealth: 100
   healthBar: {fileID: 7958257006880534015}
   healthBarSlider: {fileID: 7958257006880534000}
+  lootDrop: {fileID: 3588913388785138684, guid: 0aa44888c8ef7e74492e89845546e669, type: 3}
 --- !u!114 &7958257006314751388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,13 +219,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  attackRange: 3
+  attackRange: 0.73
   followRange: 6
   minDamage: 5
   maxDamage: 10
   projectileForce: 10
   projectileCooldown: 2
   projectile: {fileID: 7628087999602000853, guid: 541accec5ce696e44a85079ed0b6158f, type: 3}
+  rangeAttack: 0
+  meleeAttack: 1
+  attackRate: 1
+  attackPoint: {fileID: 454638312}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &7958257005917936135
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +242,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7958257005917936152}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +282,7 @@ GameObject:
   - component: {fileID: 7958257006042556302}
   - component: {fileID: 7958257006042556301}
   - component: {fileID: 7958257006042556300}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,7 +382,7 @@ GameObject:
   - component: {fileID: 7958257006363315985}
   - component: {fileID: 7958257006363315987}
   - component: {fileID: 7958257006363315986}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +458,7 @@ GameObject:
   - component: {fileID: 7958257006419388108}
   - component: {fileID: 7958257006419388110}
   - component: {fileID: 7958257006419388109}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,7 +533,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7958257006880534001}
   - component: {fileID: 7958257006880534000}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,7 +549,7 @@ RectTransform:
   m_GameObject: {fileID: 7958257006880534015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0074837217, y: 0.01103849, z: 0.93546516}
+  m_LocalScale: {x: 0.027983973, y: 0.03571032, z: 0.93546516}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7958257006419388108}
@@ -519,7 +559,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -956.29, y: -539.4289}
+  m_AnchoredPosition: {x: -955.69, y: -536.7702}
   m_SizeDelta: {x: 120, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7958257006880534000

@@ -9,18 +9,23 @@ public class PlayerStats : MonoBehaviour
     public static PlayerStats playerStats;
 
     public GameObject player;
-    
-    public TMP_Text healthText;
-    public Slider healthSlider;
-    
-    public TMP_Text manaText;
-    public Slider manaSlider;
 
+    [Header("Player Settings")]
     public float health;
     public float maxHealth;
 
     public float mana;
     public float maxMana;
+
+    public float minDamage;
+    public float maxDamage;
+
+    [Header("Player UI")]
+    public TMP_Text healthText;
+    public Slider healthSlider;
+    
+    public TMP_Text manaText;
+    public Slider manaSlider;
 
     void Awake()
     {
@@ -97,5 +102,11 @@ public class PlayerStats : MonoBehaviour
     private float CalculateHealthPrecent()
     {
         return (health / maxHealth);
+    }
+
+    public float GetRandomDamage()
+    {
+        float damage = (Random.Range(minDamage, maxDamage));
+        return damage;
     }
 }

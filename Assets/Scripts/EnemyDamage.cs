@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyRecieveDamage : MonoBehaviour
+public class EnemyDamage : MonoBehaviour
 {
     public float health;
     public float maxHealth;
 
     public GameObject healthBar;
     public Slider healthBarSlider;
+    public GameObject lootDrop;
 
     void Start()
     {
@@ -49,6 +50,10 @@ public class EnemyRecieveDamage : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            if (lootDrop != null)
+            { 
+                Instantiate(lootDrop, transform.position, Quaternion.identity);
+            }
         }
     }
 

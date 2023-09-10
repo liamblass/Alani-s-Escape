@@ -5,11 +5,16 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    Vector2 targetPos;
+    private Vector2 targetPos;
     public float speed;
     public float dashRange;
+    public float dashCooldown;
     private Vector2 direction;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
+    private float nextDashTime;
+   
+
     private enum Facing { UP, DOWN, LEFT, RIGHT };
     private Facing facingDir = Facing.DOWN;
 
@@ -19,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -43,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
         if (direction.x != 0 || direction.y != 0)
         {
             SetAnimatorMovement(direction);
+            spriteRenderer.flipX = false;
         }
         else
         {
@@ -76,8 +83,10 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            if (direction != Vector2.zero) // Check if moving before dashing
+            nextDashTime = Time.time + 1f / dashCooldown;
+            if (direction != Vector2.zero && Time.time >= nextDashTime) // Check if moving before dashing
             {
+
                 Vector2 currentPos = transform.position;
                 targetPos = Vector2.zero;
                 if (facingDir == Facing.UP)
@@ -108,3 +117,5 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("yDir", direction.y);
     }
 }
+
+

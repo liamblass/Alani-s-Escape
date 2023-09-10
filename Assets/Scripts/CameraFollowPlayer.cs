@@ -6,12 +6,8 @@ public class CameraFollowPlayer : MonoBehaviour
 {
     public float smoothing;
     public Vector3 offset;
-    private Transform player;
+    public Transform player;
 
-    private void Start()
-    {
-        player = PlayerStats.playerStats.player.transform;
-    }
 
     void FixedUpdate()
     {

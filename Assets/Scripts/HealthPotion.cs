@@ -10,11 +10,11 @@ public class HealthPotion : MonoBehaviour
     {
         if (collision.tag != "Enemy")
         {
-            if (collision.tag == "Player")
+            if (collision.name == "Alani")
             {
                 PlayerStats.playerStats.HealCharacter(heal);
+                Destroy(gameObject);
             }
-            Destroy(gameObject);
         }
     }
 }
