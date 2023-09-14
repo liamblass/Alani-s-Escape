@@ -44,11 +44,12 @@ public class PlayerCombat : MonoBehaviour
                 foreach (Collider2D enemy in hitEnemies)
                 {
                     enemy.GetComponent<EnemyDamage>().DealDamage(attackDamege);
+                    Debug.Log("Player damage: " + attackDamege);
                 }
                 if (transform.position.x > mousePos.x)
                 {
                     spriteRenderer.flipX = true;
-                    attackPoint.transform.Translate(attackPoint.position.x * -1, attackPoint.position.y, attackPoint.position.z);
+                    //attackPoint.transform.Translate(attackPoint.position.x * -1, attackPoint.position.y, attackPoint.position.z);
                     //attackPoint.position = new Vector3(mousePos.x / Screen.width - .5f, 0, mousePos.y / Screen.height - .5f);
                 }
 
@@ -77,12 +78,12 @@ public class PlayerCombat : MonoBehaviour
             if (mousePos.x >= transform.position.x)
             {
                 spriteRenderer.flipX = false;
-                attackPoint.localPosition = new Vector3(1, attackPoint.position.y, 0f);
+                attackPoint.localPosition = new Vector3(1, 0, 0f);
             }
             if (mousePos.x < transform.position.x)
             {
                 spriteRenderer.flipX = true;
-                attackPoint.localPosition = new Vector3(-1, attackPoint.position.y, 0f);
+                attackPoint.localPosition = new Vector3(-1, 0, 0f);
 
             }
         }

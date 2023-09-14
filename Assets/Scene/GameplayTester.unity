@@ -652,6 +652,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 893481141}
     - target: {fileID: 8567541500276566264, guid: 7258bb597aafc564487145ad7d0f1eb6, type: 3}
+      propertyPath: maxDamage
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567541500276566264, guid: 7258bb597aafc564487145ad7d0f1eb6, type: 3}
+      propertyPath: minDamage
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567541500276566264, guid: 7258bb597aafc564487145ad7d0f1eb6, type: 3}
       propertyPath: healthText
       value: 
       objectReference: {fileID: 544334063}

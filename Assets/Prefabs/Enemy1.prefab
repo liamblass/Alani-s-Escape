@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  attackRange: 0.73
+  attackRange: 1.01
   followRange: 6
   minDamage: 5
   maxDamage: 10

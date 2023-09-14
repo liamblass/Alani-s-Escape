@@ -181,7 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   dashRange: 3
-  dashCooldown: 0
+  dashCooldown: 2
   lastScenePosition: {x: 0, y: 0}
 --- !u!114 &6378530224219458900
 MonoBehaviour:

@@ -76,10 +76,12 @@ public class EnemyAttack : MonoBehaviour
                 Vector2 myPos = transform.position;
                 Vector2 targetPos = player.transform.position;
                 animator.SetTrigger("Attack");
-                Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer);
-                foreach (Collider2D playerr in hitPlayer)
+                float attackDamage = GetRandomDamage();
+                Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange);
+                foreach (Collider2D player in hitPlayer)
                 {
-                    PlayerStats.playerStats.DealDamage(GetRandomDamage());
+                    PlayerStats.playerStats.DealDamage(attackDamage);
+                    //Debug.Log("Enemy damage: " + attackDamage);
                 }
                 if(targetPos.x > myPos.x)
                 {
