@@ -33,6 +33,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void Attack()
     {
+        nextAttackTime = Time.time + attackRate;   
         if (Time.time >= nextAttackTime)
         {
             if (isAttacking)
