@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scene/MainMenu.unity
     guid: 8328a10ef432be244bce421e6f03f2de
   - enabled: 1
+    path: Assets/Scene/MVP.unity
+    guid: 54542073f583fdc46b3c93e8539d59e2
+  - enabled: 0
     path: Assets/Scene/GameplayTester.unity
     guid: df4e93f750f8a784fbf3b65d6430366a
-  - enabled: 1
-    path: Assets/Scene/dungeonTester.unity
+  - enabled: 0
+    path: Assets/Scene/DungeonTester.unity
     guid: 492a0e5ab8ae67348ba9571b2d706709
   m_configObjects: {}

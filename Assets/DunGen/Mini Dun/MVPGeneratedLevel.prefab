@@ -73254,7 +73254,7 @@ GameObject:
   - component: {fileID: 4343919940456841490}
   - component: {fileID: 9052997299043690174}
   m_Layer: 0
-  m_Name: Generated Level
+  m_Name: MVPGeneratedLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
