@@ -62,7 +62,7 @@ Transform:
   m_GameObject: {fileID: 3487304106556472415}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.22, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4636854, y: 1.6210781, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7958257006042556299}
@@ -219,8 +219,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  attackRange: 1.01
-  followRange: 6
+  attackRange: 1.5
+  followRange: 3.28
   minDamage: 5
   maxDamage: 10
   projectileForce: 10
@@ -307,7 +307,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 191.258, y: 108}
+  m_AnchoredPosition: {x: 190.75, y: 108.56}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7958257006042556302
@@ -548,7 +548,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7958257006880534015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.027983973, y: 0.03571032, z: 0.93546516}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -559,7 +559,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -955.69, y: -536.7702}
+  m_AnchoredPosition: {x: -953.28, y: -539.44}
   m_SizeDelta: {x: 120, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7958257006880534000
