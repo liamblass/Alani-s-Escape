@@ -82,11 +82,10 @@ public class PlayerMovement : MonoBehaviour
             facingDir = Facing.LEFT;
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            
-            nextDashTime = Time.time + dashCooldown;
+        {            
             if (direction != Vector2.zero && Time.time >= nextDashTime) // Check if moving before dashing
             {
+                nextDashTime = Time.time + dashCooldown;
                 Debug.Log("this");
                 Vector2 currentPos = transform.position;
                 targetPos = Vector2.zero;

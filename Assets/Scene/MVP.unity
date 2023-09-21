@@ -326,11 +326,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7958257006314751388, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
       propertyPath: maxDamage
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7958257006314751388, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
       propertyPath: minDamage
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7958257006314751388, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
       propertyPath: followRange
@@ -395,11 +395,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7958257006314751388, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
       propertyPath: maxDamage
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7958257006314751388, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
       propertyPath: minDamage
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7958257006314751388, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
       propertyPath: followRange
@@ -467,6 +467,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6378530224219458900, guid: 7e40b349f5ac01349931a8b3a83e46d8, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 7628087999602000853, guid: ab4f4bb4bc4f4b340a5ccc50af32859a, type: 3}
+    - target: {fileID: 6437533817832155079, guid: 7e40b349f5ac01349931a8b3a83e46d8, type: 3}
+      propertyPath: attackRate
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e40b349f5ac01349931a8b3a83e46d8, type: 3}
 --- !u!1001 &737266019
@@ -482,11 +490,11 @@ PrefabInstance:
       objectReference: {fileID: 852943494}
     - target: {fileID: 8567541500276566264, guid: 7258bb597aafc564487145ad7d0f1eb6, type: 3}
       propertyPath: maxDamage
-      value: 25
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 8567541500276566264, guid: 7258bb597aafc564487145ad7d0f1eb6, type: 3}
       propertyPath: minDamage
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8567541500276566264, guid: 7258bb597aafc564487145ad7d0f1eb6, type: 3}
       propertyPath: healthText
@@ -761,11 +769,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7958257006314751388, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
       propertyPath: maxDamage
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7958257006314751388, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
       propertyPath: minDamage
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7958257006314751388, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
       propertyPath: followRange
@@ -895,7 +903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7958257006314751388, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
       propertyPath: maxDamage
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7958257006314751388, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
       propertyPath: minDamage
@@ -974,6 +982,14 @@ PrefabInstance:
       propertyPath: lootDrop
       value: 
       objectReference: {fileID: 3588913388785138684, guid: 0aa44888c8ef7e74492e89845546e669, type: 3}
+    - target: {fileID: 7958257006042556302, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958257006314751388, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7958257006314751388, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
       propertyPath: followRange
       value: 4.2
@@ -1092,11 +1108,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7958257006314751388, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
       propertyPath: maxDamage
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7958257006314751388, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
       propertyPath: minDamage
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7958257006314751388, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
       propertyPath: followRange
@@ -1170,11 +1186,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7958257006314751388, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
       propertyPath: maxDamage
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7958257006314751388, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
       propertyPath: minDamage
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7958257006314751388, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
       propertyPath: followRange
@@ -1253,6 +1269,10 @@ PrefabInstance:
     - target: {fileID: 3487304106556472415, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
       propertyPath: m_Name
       value: Enemy1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958257006314751388, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}
+      propertyPath: maxDamage
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fbe7096ea90ad40b9efe557674bc3f, type: 3}

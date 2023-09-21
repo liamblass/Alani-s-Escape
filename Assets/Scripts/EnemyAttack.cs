@@ -81,15 +81,15 @@ public class EnemyAttack : MonoBehaviour
                 foreach (Collider2D player in hitPlayer)
                 {
                     PlayerStats.playerStats.DealDamage(attackDamage);
-                    //Debug.Log("Enemy damage: " + attackDamage);
+                    Debug.Log("Enemy damage: " + attackDamage);
                 }
                 if(targetPos.x > myPos.x)
                 {
-                    attackPoint.localPosition = new Vector3(-1, attackPoint.position.y, 0f);
+                    attackPoint.localPosition = new Vector3(-1, 0f, 0f);
                 }
                 if (targetPos.x <= myPos.x)
                 {
-                    attackPoint.localPosition = new Vector3(1, attackPoint.position.y, 0f);
+                    attackPoint.localPosition = new Vector3(1, 0f, 0f);
                 }
             }
             StartCoroutine(MeleeAttackPlayer());

@@ -15,6 +15,10 @@ public class PlayerCombat : MonoBehaviour
     private Vector2 diraction;
     private SpriteRenderer spriteRenderer;
     private bool isAttacking;
+    public GameObject projectile;
+    public float projectileForce;
+    public float projectileRate;
+    private float nextProjectileRate;
 
 
     public LayerMask enemyLayers;
@@ -30,12 +34,30 @@ public class PlayerCombat : MonoBehaviour
     {
         checkInput();
     }
+    private void ShootProjectile()
+    {
+        if (Time.time > projectileRate)
+        {
+            nextProjectileRate = Time.time + projectileRate;
+            if (isAttacking)
+            {
+                GameObject spell = Instantiate(projectile, transform.position, Quaternion.identity.normalized);
+                Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector2 myPos = transform.position;
+                Vector2 direction = (mousePos - myPos).normalized;
+                spell.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
+                float damage = PlayerStats.playerStats.GetRandomDamage();
+                spell.GetComponent<TestPorjectiles>().damage = damage;
+            }
+        }
+    }
 
     private void Attack()
     {
-        nextAttackTime = Time.time + attackRate;   
-       // if (Time.time >= nextAttackTime)
+        
+        if (Time.time > nextAttackTime)
         {
+            nextAttackTime = attackRate + Time.time;
             if (isAttacking)
             {
                 animator.SetTrigger("Attack");
@@ -72,9 +94,9 @@ public class PlayerCombat : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            
             isAttacking = true;
             Attack();
-            nextAttackTime = Time.time + 1f / attackRate;
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             if (mousePos.x >= transform.position.x)
             {
@@ -86,6 +108,20 @@ public class PlayerCombat : MonoBehaviour
                 spriteRenderer.flipX = true;
                 attackPoint.localPosition = new Vector3(-1, 0, 0f);
 
+            }
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            ShootProjectile();
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if (mousePos.x >= transform.position.x)
+            {
+                spriteRenderer.flipX = false; 
+            }
+            if (mousePos.x < transform.position.x)
+            {
+                spriteRenderer.flipX = true;
             }
         }
     }
