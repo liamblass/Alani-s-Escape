@@ -670,6 +670,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6378530224219458900, guid: 7e40b349f5ac01349931a8b3a83e46d8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6437533817832155079, guid: 7e40b349f5ac01349931a8b3a83e46d8, type: 3}
       propertyPath: attackRate
       value: 0.6
