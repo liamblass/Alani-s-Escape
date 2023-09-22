@@ -21,6 +21,7 @@ public class MVPGameManager : MonoBehaviour
     {
         Die();
         KillBoss();
+        ResetScene();
     }
 
     private void Die()
@@ -34,9 +35,9 @@ public class MVPGameManager : MonoBehaviour
 
     private void KillBoss()
     {
-        if (boss = null)
+        if (boss == null)
         {
-            gameoverText.text = "Esscape!";
+            gameoverText.text = "Esscaped!";
             Invoke(nameof(LoadLastScene), 5);
         }
     }
@@ -46,5 +47,14 @@ public class MVPGameManager : MonoBehaviour
         int scene = SceneManager.GetActiveScene().buildIndex;
         scene--;
         SceneManager.LoadScene(scene);
+    }
+
+    private void ResetScene()
+    {
+        int scene = SceneManager.GetActiveScene().buildIndex;
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SceneManager.LoadScene(scene);
+        }
     }
 }

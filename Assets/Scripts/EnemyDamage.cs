@@ -12,9 +12,12 @@ public class EnemyDamage : MonoBehaviour
     public Slider healthBarSlider;
     public GameObject lootDrop;
 
+    private Animator animator;
+
     void Start()
     {
         health = maxHealth;
+        animator = GetComponent<Animator>();
     }
 
 
@@ -49,7 +52,8 @@ public class EnemyDamage : MonoBehaviour
     {
         if (health <= 0)
         {
-            Destroy(gameObject);
+            animator.SetBool("isDead", true);
+            Destroy(gameObject, 0.5f);
             if (lootDrop != null)
             { 
                 Instantiate(lootDrop, transform.position, Quaternion.identity);

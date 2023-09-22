@@ -37,10 +37,10 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 newPosition = (Vector2)transform.position + (direction * speed * Time.deltaTime);
 
-        // Perform collision detection
-        RaycastHit2D hit = Physics2D.Linecast(transform.position, newPosition);
+        //Perform collision detection
+        //RaycastHit2D hit = Physics2D.Linecast(transform.position, newPosition);
 
-        if (hit.collider == null)
+        //if (hit.collider == null)
         {
             // No collision detected, move the player
             transform.position = newPosition;
